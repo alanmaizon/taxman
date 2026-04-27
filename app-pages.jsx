@@ -288,7 +288,11 @@ function WeekPage({ go, isMobile, weekNum, progress }) {
                 {!isMobile && <div className="mono" style={{ fontSize: 11, color: 'var(--moss-deep)', letterSpacing: '0.06em' }}>{r.src.toUpperCase()}</div>}
                 <div>
                   {isMobile && <div className="mono" style={{ fontSize: 9, color: 'var(--moss-deep)', letterSpacing: '0.08em', marginBottom: 4 }}>{r.src.toUpperCase()}</div>}
-                  <h3 style={{ fontSize: isMobile ? 15 : 18, margin: 0, letterSpacing: '-0.005em', fontWeight: 500, lineHeight: 1.3 }}>{r.t}</h3>
+                  <h3 style={{ fontSize: isMobile ? 15 : 18, margin: 0, letterSpacing: '-0.005em', fontWeight: 500, lineHeight: 1.3 }}>
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--moss)', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}>{r.t}</a>
+                    ) : r.t}
+                  </h3>
                   {!isMobile && <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: '4px 0 0', lineHeight: 1.5 }}>{r.d}</p>}
                 </div>
                 <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textAlign: 'right' }}>{r.min} MIN</div>
@@ -424,78 +428,78 @@ function Quiz({ quiz, isMobile }) {
 // ---- Data: readings ----
 const READINGS = {
   '01': [
-    { src: "Revenue", t: "How to know if you are resident for tax purposes", d: "The 183 / 280 day tests and the 30-day minimum rule.", min: "20" },
-    { src: "Revenue", t: "Tax residence overview", d: "Chargeability concepts and links to domicile / remittance basis.", min: "20" },
-    { src: "Citizens Info", t: "Tax residence and domicile in Ireland", d: "Plain-English cross-check on the same rules.", min: "15" },
-    { src: "Statute Book", t: "TCA 1997, Part 34 — residence provisions", d: "The legal anchor under the Revenue guidance.", min: "30" },
+    { src: "Revenue", t: "How to know if you are resident for tax purposes", url: "https://www.revenue.ie/en/jobs-and-pensions/tax-residence/index.aspx", d: "The 183 / 280 day tests and the 30-day minimum rule.", min: "20" },
+    { src: "Revenue", t: "Tax residence overview", url: "https://www.revenue.ie/en/jobs-and-pensions/tax-residence/tax-residence.aspx", d: "Chargeability concepts and links to domicile / remittance basis.", min: "20" },
+    { src: "Citizens Info", t: "Tax residence and domicile in Ireland", url: "https://www.citizensinformation.ie/en/money-and-tax/tax/moving-country-and-taxation/tax-residence-and-domicile-in-ireland/", d: "Plain-English cross-check on the same rules.", min: "15" },
+    { src: "Statute Book", t: "TCA 1997, Part 34 — residence provisions", url: "https://www.irishstatutebook.ie/eli/1997/act/39/enacted/en/html", d: "The legal anchor under the Revenue guidance.", min: "30" },
   ],
   '02': [
-    { src: "Revenue", t: "Classification of activities as trading", d: "The trade concept and badges of trade. Why category decides everything.", min: "25" },
-    { src: "Revenue", t: "Rental income — Case V overview", d: "How rental sits in the Schedule D framework; section 97 TCA context.", min: "20" },
-    { src: "Revenue", t: "Dividend income overview", d: "Treatment for individuals and links to self-assessment thresholds.", min: "15" },
-    { src: "Statute Book", t: "TCA 1997 — definitions and charging structure", d: "The legal base for the schedule / case system.", min: "20" },
+    { src: "Revenue", t: "Classification of activities as trading", url: "https://www.revenue.ie/en/self-assessment-and-self-employment/self-employed-income/index.aspx", d: "The trade concept and badges of trade. Why category decides everything.", min: "25" },
+    { src: "Revenue", t: "Rental income — Case V overview", url: "https://www.revenue.ie/en/property/rental-income/index.aspx", d: "How rental sits in the Schedule D framework; section 97 TCA context.", min: "20" },
+    { src: "Revenue", t: "Dividend income overview", url: "https://www.revenue.ie/en/jobs-and-pensions/dividends/index.aspx", d: "Treatment for individuals and links to self-assessment thresholds.", min: "15" },
+    { src: "Statute Book", t: "TCA 1997 — definitions and charging structure", url: "https://www.irishstatutebook.ie/eli/1997/act/39/enacted/en/html", d: "The legal base for the schedule / case system.", min: "20" },
   ],
   '03': [
-    { src: "Revenue", t: "A guide to self-assessment / Pay and File", d: "Overall compliance workflow; Form 11 and the 31 October deadline.", min: "20" },
-    { src: "Revenue", t: "Capital allowances — plant & machinery", d: "12.5% over 8 years. How allowances replace depreciation in the tax computation.", min: "30" },
-    { src: "Revenue", t: "Tax & Duty Manual — trading deductions", d: "Revenue's operational guidance on allowable vs disallowed expenses.", min: "25" },
-    { src: "Statute Book", t: "TCA 1997 — capital allowances framework", d: "The legal structure behind the rates. Use Notes for Guidance to navigate.", min: "20" },
+    { src: "Revenue", t: "A guide to self-assessment / Pay and File", url: "https://www.revenue.ie/en/self-assessment-and-self-employment/guide-to-self-assessment/index.aspx", d: "Overall compliance workflow; Form 11 and the 31 October deadline.", min: "20" },
+    { src: "Revenue", t: "Capital allowances — plant & machinery", url: "https://www.revenue.ie/en/companies-and-charities/capital-allowances/index.aspx", d: "12.5% over 8 years. How allowances replace depreciation in the tax computation.", min: "30" },
+    { src: "Revenue", t: "Tax & Duty Manual — trading deductions", url: "https://www.revenue.ie/en/self-assessment-and-self-employment/self-employed-income/allowable-business-expenses/index.aspx", d: "Revenue's operational guidance on allowable vs disallowed expenses.", min: "25" },
+    { src: "Statute Book", t: "TCA 1997 — capital allowances framework", url: "https://www.irishstatutebook.ie/eli/1997/act/39/enacted/en/html", d: "The legal structure behind the rates. Use Notes for Guidance to navigate.", min: "20" },
   ],
   '04': [
-    { src: "Revenue", t: "PAYE — how it works", d: "Your employer deducts Income Tax each time you are paid. The system overview.", min: "15" },
-    { src: "Revenue", t: "Flat Rate Expenses (FRE)", d: "Tools, uniforms, statutory registration fees. What qualifies and how to claim.", min: "20" },
-    { src: "Revenue", t: "Employer-provided cars — BIK", d: "Cash-equivalent calculation, OMV, and the km-band rate table.", min: "30" },
-    { src: "Revenue", t: "BIK exemptions — electric vehicles", d: "Nil/reduced BIK rules for EVs and links to the current thresholds.", min: "15" },
+    { src: "Revenue", t: "PAYE — how it works", url: "https://www.revenue.ie/en/jobs-and-pensions/paye/index.aspx", d: "Your employer deducts Income Tax each time you are paid. The system overview.", min: "15" },
+    { src: "Revenue", t: "Flat Rate Expenses (FRE)", url: "https://www.revenue.ie/en/jobs-and-pensions/flat-rate-expenses/index.aspx", d: "Tools, uniforms, statutory registration fees. What qualifies and how to claim.", min: "20" },
+    { src: "Revenue", t: "Employer-provided cars — BIK", url: "https://www.revenue.ie/en/jobs-and-pensions/benefit-in-kind/company-cars/index.aspx", d: "Cash-equivalent calculation, OMV, and the km-band rate table.", min: "30" },
+    { src: "Revenue", t: "BIK exemptions — electric vehicles", url: "https://www.revenue.ie/en/jobs-and-pensions/benefit-in-kind/company-cars/electric-vehicles.aspx", d: "Nil/reduced BIK rules for EVs and links to the current thresholds.", min: "15" },
   ],
   '05': [
-    { src: "Revenue", t: "Termination lump sums — basic exemption & SCSB", d: "The €10,160 + €765/year formula and the SCSB alternative.", min: "25" },
-    { src: "Revenue", t: "Rental profit and losses", d: "Gross rent less allowable expenses. Property-by-property computation.", min: "25" },
-    { src: "Revenue", t: "DIRT — deposit interest retention tax", d: "33% rate deducted at source. Who pays, who is exempt.", min: "15" },
-    { src: "Revenue", t: "Pension contribution relief limits", d: "Age-related % limits and the annual earnings cap.", min: "20" },
+    { src: "Revenue", t: "Termination lump sums — basic exemption & SCSB", url: "https://www.revenue.ie/en/jobs-and-pensions/termination-payments/index.aspx", d: "The €10,160 + €765/year formula and the SCSB alternative.", min: "25" },
+    { src: "Revenue", t: "Rental profit and losses", url: "https://www.revenue.ie/en/property/rental-income/index.aspx", d: "Gross rent less allowable expenses. Property-by-property computation.", min: "25" },
+    { src: "Revenue", t: "DIRT — deposit interest retention tax", url: "https://www.revenue.ie/en/savings-investments-and-pension/deposit-interest-retention-tax-dirt/index.aspx", d: "33% rate deducted at source. Who pays, who is exempt.", min: "15" },
+    { src: "Revenue", t: "Pension contribution relief limits", url: "https://www.revenue.ie/en/savings-investments-and-pension/pensions/index.aspx", d: "Age-related % limits and the annual earnings cap.", min: "20" },
   ],
   '06': [
-    { src: "Revenue", t: "Tax rates, bands and reliefs (2026)", d: "Standard rate band, personal credits, employee credit. Print this.", min: "20" },
-    { src: "Revenue", t: "How your Income Tax is calculated", d: "Order of operations: bands → credits → liability.", min: "25" },
-    { src: "Revenue", t: "USC chart — 2026 thresholds & rates", d: "Progressive 0.5 / 2 / 3% bands. €13,000 entry threshold.", min: "15" },
-    { src: "Gov.ie", t: "PRSI Class A contribution rates", d: "4.2% to 4.35% rate change effective 1 October 2026.", min: "10" },
-    { src: "Statute Book", t: "Taxes Consolidation Act 1997, Part 2", d: "The charging structure that everything above implements.", min: "30" },
+    { src: "Revenue", t: "Tax rates, bands and reliefs (2026)", url: "https://www.revenue.ie/en/personal-tax-credits-reliefs-and-exemptions/tax-relief-charts/index.aspx", d: "Standard rate band, personal credits, employee credit. Print this.", min: "20" },
+    { src: "Revenue", t: "How your Income Tax is calculated", url: "https://www.revenue.ie/en/jobs-and-pensions/calculating-your-income-tax/index.aspx", d: "Order of operations: bands → credits → liability.", min: "25" },
+    { src: "Revenue", t: "USC chart — 2026 thresholds & rates", url: "https://www.revenue.ie/en/jobs-and-pensions/usc/index.aspx", d: "Progressive 0.5 / 2 / 3% bands. €13,000 entry threshold.", min: "15" },
+    { src: "Gov.ie", t: "PRSI Class A contribution rates", url: "https://www.gov.ie/en/publication/b98c3-prsi-contribution-rates/", d: "4.2% to 4.35% rate change effective 1 October 2026.", min: "10" },
+    { src: "Statute Book", t: "Taxes Consolidation Act 1997, Part 2", url: "https://www.irishstatutebook.ie/eli/1997/act/39/enacted/en/html", d: "The charging structure that everything above implements.", min: "30" },
   ],
   '07': [
-    { src: "Revenue", t: "VAT thresholds (goods & services)", d: "When you must register and when you may register voluntarily.", min: "15" },
-    { src: "Revenue", t: "Current VAT rates", d: "Standard 23%, reduced 13.5%, second reduced 9%, zero.", min: "10" },
-    { src: "Revenue", t: "Completing the VAT3 return", d: "T1, T2, T3, T4 field definitions and the E-fields for goods movements.", min: "30" },
-    { src: "Revenue", t: "VAT due dates", d: "19th of following month; ROS extension to 23rd.", min: "10" },
+    { src: "Revenue", t: "VAT thresholds (goods & services)", url: "https://www.revenue.ie/en/vat/vat-registration/who-should-register-for-vat/index.aspx", d: "When you must register and when you may register voluntarily.", min: "15" },
+    { src: "Revenue", t: "Current VAT rates", url: "https://www.revenue.ie/en/vat/vat-rates/index.aspx", d: "Standard 23%, reduced 13.5%, second reduced 9%, zero.", min: "10" },
+    { src: "Revenue", t: "Completing the VAT3 return", url: "https://www.revenue.ie/en/vat/vat-returns/completing-vat-return/index.aspx", d: "T1, T2, T3, T4 field definitions and the E-fields for goods movements.", min: "30" },
+    { src: "Revenue", t: "VAT due dates", url: "https://www.revenue.ie/en/vat/vat-returns/paying-vat/index.aspx", d: "19th of following month; ROS extension to 23rd.", min: "10" },
   ],
   '08': [
-    { src: "Revenue", t: "How to calculate CGT", d: "Proceeds less allowable costs = gain. Order of operations and examples.", min: "25" },
-    { src: "Revenue", t: "What is exempt from CGT?", d: "The €1,270 annual personal exemption and categories of exempt disposal.", min: "15" },
-    { src: "Revenue", t: "When and how do you pay and file CGT?", d: "15 Dec / 31 Jan payment windows. Return filed 31 Oct of following year.", min: "15" },
-    { src: "Revenue", t: "CG50A clearance certificate", d: "When it is needed (property > €500,000) and how to apply via eCG50.", min: "15" },
+    { src: "Revenue", t: "How to calculate CGT", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cgt/index.aspx", d: "Proceeds less allowable costs = gain. Order of operations and examples.", min: "25" },
+    { src: "Revenue", t: "What is exempt from CGT?", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cgt/what-gains-are-exempt-from-cgt.aspx", d: "The €1,270 annual personal exemption and categories of exempt disposal.", min: "15" },
+    { src: "Revenue", t: "When and how do you pay and file CGT?", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cgt/pay-and-file.aspx", d: "15 Dec / 31 Jan payment windows. Return filed 31 Oct of following year.", min: "15" },
+    { src: "Revenue", t: "CG50A clearance certificate", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cgt/cg50a.aspx", d: "When it is needed (property > €500,000) and how to apply via eCG50.", min: "15" },
   ],
   '09': [
-    { src: "Revenue", t: "Credit for CGT against CAT", d: "When both taxes arise on the same asset, a CGT credit may reduce CAT.", min: "20" },
-    { src: "Revenue", t: "CAT manual — CGT credit guidance", d: "Technical detail: limits on the credit and the order of set-off.", min: "25" },
-    { src: "Revenue", t: "Principal private residence (PPR) relief", d: "Conditions, periods of absence, and how to compute partial PPR.", min: "20" },
-    { src: "Revenue", t: "CGT pay and file rules", d: "Even if no tax is due after reliefs, the filing obligation still applies.", min: "10" },
+    { src: "Revenue", t: "Credit for CGT against CAT", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat-credits/cgt-cat-credit.aspx", d: "When both taxes arise on the same asset, a CGT credit may reduce CAT.", min: "20" },
+    { src: "Revenue", t: "CAT manual — CGT credit guidance", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat/index.aspx", d: "Technical detail: limits on the credit and the order of set-off.", min: "25" },
+    { src: "Revenue", t: "Principal private residence (PPR) relief", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cgt/principal-private-residence-relief.aspx", d: "Conditions, periods of absence, and how to compute partial PPR.", min: "20" },
+    { src: "Revenue", t: "CGT pay and file rules", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cgt/pay-and-file.aspx", d: "Even if no tax is due after reliefs, the filing obligation still applies.", min: "10" },
   ],
   '10': [
-    { src: "Revenue", t: "Corporation Tax — basis of charge", d: "12.5% on trading income; 25% on non-trading / excepted trade income.", min: "20" },
-    { src: "Revenue", t: "Capital allowances — company perspective", d: "Same 12.5% rate as sole traders. Integrated with the CT computation bridge.", min: "20" },
-    { src: "Revenue", t: "CT payment and filing", d: "Nine months after AP end; 23rd of the ninth month for ROS filers.", min: "20" },
-    { src: "Revenue", t: "CT1 form and preliminary tax", d: "CT1 structure and the small-company preliminary tax rule (90% of prior year).", min: "20" },
+    { src: "Revenue", t: "Corporation Tax — basis of charge", url: "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/corporation-tax/index.aspx", d: "12.5% on trading income; 25% on non-trading / excepted trade income.", min: "20" },
+    { src: "Revenue", t: "Capital allowances — company perspective", url: "https://www.revenue.ie/en/companies-and-charities/capital-allowances/index.aspx", d: "Same 12.5% rate as sole traders. Integrated with the CT computation bridge.", min: "20" },
+    { src: "Revenue", t: "CT payment and filing", url: "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/paying-and-filing/index.aspx", d: "Nine months after AP end; 23rd of the ninth month for ROS filers.", min: "20" },
+    { src: "Revenue", t: "CT1 form and preliminary tax", url: "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/corporation-tax-returns/index.aspx", d: "CT1 structure and the small-company preliminary tax rule (90% of prior year).", min: "20" },
   ],
   '11': [
-    { src: "Revenue", t: "Trading losses — offset options", d: "Same-year offset, carry-back to prior AP, carry-forward. Claim mechanics.", min: "25" },
-    { src: "Revenue", t: "Group Relief — claim and surrender", d: "How losses are surrendered within a group; the two-year claim window.", min: "25" },
-    { src: "Revenue", t: "Close company surcharge", d: "20% on undistributed estate/investment income. Reduced if distributed within 18 months.", min: "20" },
-    { src: "Statute Book", t: "TCA 1997 — losses provisions", d: "The legal framework. Revenue's Trading Losses manual is the operational guide.", min: "15" },
+    { src: "Revenue", t: "Trading losses — offset options", url: "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/losses/index.aspx", d: "Same-year offset, carry-back to prior AP, carry-forward. Claim mechanics.", min: "25" },
+    { src: "Revenue", t: "Group Relief — claim and surrender", url: "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/group-relief/index.aspx", d: "How losses are surrendered within a group; the two-year claim window.", min: "25" },
+    { src: "Revenue", t: "Close company surcharge", url: "https://www.revenue.ie/en/companies-and-charities/close-companies/surcharge/index.aspx", d: "20% on undistributed estate/investment income. Reduced if distributed within 18 months.", min: "20" },
+    { src: "Statute Book", t: "TCA 1997 — losses provisions", url: "https://www.irishstatutebook.ie/eli/1997/act/39/enacted/en/html", d: "The legal framework. Revenue's Trading Losses manual is the operational guide.", min: "15" },
   ],
   '12': [
-    { src: "Revenue", t: "CAT group thresholds", d: "Group A €400,000 (post 2 Oct 2024), Group B €40,000, Group C €20,000.", min: "20" },
-    { src: "Revenue", t: "Small gift exemption & spouse exemption", d: "€3,000 per disponer per year. Spouse / civil partner: fully exempt.", min: "15" },
-    { src: "Revenue", t: "Dwelling house exemption", d: "Conditions: recipient must reside there for 3 years and have no other dwelling.", min: "20" },
-    { src: "Revenue", t: "Agricultural & business relief", d: "90% reduction on qualifying assets, subject to active-farmer / owner-manager test.", min: "25" },
-    { src: "Revenue", t: "CAT pay and file dates", d: "Valuation date Jan–Aug: pay by 31 Oct. Sep–Dec: pay by 31 Jan following.", min: "10" },
+    { src: "Revenue", t: "CAT group thresholds", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat/thresholds/index.aspx", d: "Group A €400,000 (post 2 Oct 2024), Group B €40,000, Group C €20,000.", min: "20" },
+    { src: "Revenue", t: "Small gift exemption & spouse exemption", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat/exemptions/index.aspx", d: "€3,000 per disponer per year. Spouse / civil partner: fully exempt.", min: "15" },
+    { src: "Revenue", t: "Dwelling house exemption", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat/exemptions/dwelling-house-exemption.aspx", d: "Conditions: recipient must reside there for 3 years and have no other dwelling.", min: "20" },
+    { src: "Revenue", t: "Agricultural & business relief", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat/reliefs/index.aspx", d: "90% reduction on qualifying assets, subject to active-farmer / owner-manager test.", min: "25" },
+    { src: "Revenue", t: "CAT pay and file dates", url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/cat/pay-and-file.aspx", d: "Valuation date Jan–Aug: pay by 31 Oct. Sep–Dec: pay by 31 Jan following.", min: "10" },
   ],
   default: [
     { src: "Revenue", t: "Topic overview & worked examples", d: "The main Revenue guidance page for this week's tax head.", min: "25" },
