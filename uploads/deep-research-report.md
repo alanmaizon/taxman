@@ -248,10 +248,10 @@ flowchart TD
     D --> E[Compute taxable amounts per category]
     E --> F[Sum taxable income]
     F --> G[Apply Income Tax bands: 20% then 40%]
-    G --> H[Subtract tax credits (e.g., personal + employee credits)]
+    G --> H[Subtract tax credits: personal + employee credits]
     H --> I[Compute USC on chargeable income]
     I --> J[Compute PRSI based on class + pay period rules]
-    J --> K[Add other liabilities (e.g., CGT due dates separate; CAT if applicable)]
+    J --> K[Add other liabilities: CGT due dates separate; CAT if applicable]
     K --> L[Check filing/payment obligations + deadlines]
     L --> M[End: Document calculation + sources + assumptions]
 ```
@@ -484,5 +484,3 @@ https://www.irishstatutebook.ie/eli/2010/act/31/enacted/en/html
 Irish Statute Book – Capital Acquisitions Tax Consolidation Act 2003:
 https://www.irishstatutebook.ie/eli/2003/act/1/enacted/en/html
 ```
-
-entity["organization","University College Dublin","dublin, ireland"]
