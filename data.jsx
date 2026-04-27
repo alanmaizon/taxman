@@ -23,7 +23,7 @@ const TAG_PILL = {
 };
 
 const FAQ = [
-  { q: "Is this a UCD or accredited diploma?", a: "No. This is a free, open self-study programme that mirrors the topic map of well-known Irish taxation diplomas. It does not issue an accredited credential." },
+  { q: "Is this an accredited diploma?", a: "No. This is a free, open self-study programme that mirrors the topic map of well-known Irish taxation diplomas. It does not issue an accredited credential." },
   { q: "What does it cost?", a: "Nothing. All readings link to free official sources — Revenue.ie, Citizens Information, and the Irish Statute Book." },
   { q: "How much time per week?", a: "Plan for five to nine hours: read official guidance, build a one-page cheat-sheet, work the spreadsheet, take the quiz, log your sources." },
   { q: "Will I be ready to file my own taxes?", a: "You will understand the structure of every major Irish tax head and be able to follow worked computations. For complex situations, a registered tax adviser is still the right call." },

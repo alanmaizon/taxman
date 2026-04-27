@@ -8,9 +8,9 @@ Crucially, much of the official Irish tax guidance you would link to (and, where
 
 This report provides a ready‑to‑build **open course blueprint**: week‑by‑week modules, objectives, primary reading lists (Revenue.ie, CitizensInformation.ie, legislation), weekly exercises and quizzes with sample answers, worked computations (Income Tax+USC/PRSI, VAT3, CGT, CT, CAT), an assessment rubric, capstone marking scheme, time estimates, and accessibility/formatting guidance for slides, cheat‑sheets, and spreadsheets.
 
-## Reference syllabus and comparison with the UCD diploma
+## Reference syllabus and comparison with the diploma
 
-The UCD Professional Academy course page publicly describes the programme as a **12‑week** diploma covering all the major tax heads, and lists module titles from “Introduction to Irish Taxation” through VAT, CGT computation/reliefs, Corporation Tax computation/losses, and CAT exemptions/planning. citeturn5view0turn5view1 The brochure specifies part‑time study as **one 3‑hour live online evening class per week over 12 weeks**, and assessment as MCQ quizzes (20%) plus a **3,000‑word written assignment (80%)**, with an electronic diploma issued on completion. citeturn5view1 The course is marketed as updated for the latest Finance Act and “2026 tax regulations” (including Budget 2026 measures). citeturn5view0turn5view1turn12search7
+The course page publicly describes the programme as a **12‑week** diploma covering all the major tax heads, and lists module titles from “Introduction to Irish Taxation” through VAT, CGT computation/reliefs, Corporation Tax computation/losses, and CAT exemptions/planning. citeturn5view0turn5view1 The brochure specifies part‑time study as **one 3‑hour live online evening class per week over 12 weeks**, and assessment as MCQ quizzes (20%) plus a **3,000‑word written assignment (80%)**, with an electronic diploma issued on completion. citeturn5view1 The course is marketed as updated for the latest Finance Act and “2026 tax regulations” (including Budget 2026 measures). citeturn5view0turn5view1turn12search7
 
 A free self‑study course can mirror this **topic map + sequencing**, but should be explicit that it is **not a formal qualification** and does not include live instruction, tutor feedback, or an institution‑issued credential.
 
@@ -94,7 +94,7 @@ Quiz (sample questions + answers):
 Learning objectives: You will be able to (i) distinguish employment income vs trading/professional income vs rental vs investment; (ii) explain “trade” and why “badges of trade” matter; (iii) map common incomes to Schedule D Cases (competence level). citeturn24search12turn12search6  
 Core readings:  
 - Revenue manual: “General guidance on the classification of activities as trading” (trade concept; CT/trading linkage). citeturn24search12  
-- Revenue UCD‑aligned subtopic support: Rental (Case V) rules intro (section 97 TCA context). citeturn12search6  
+- Revenue-aligned subtopic support: Rental (Case V) rules intro (section 97 TCA context). citeturn12search6  
 - Revenue: Dividend income overview (how it’s treated for individuals; links to filing thresholds). citeturn16search1  
 - Legislation anchors: Taxes Consolidation Act 1997 (definitions and charging structure). citeturn4search0  
 Practical exercise: Build a “classification table” with 15 example receipts (wages, tips, self‑employed fees, rent, dividends, bank interest, BIK, redundancy lump sum, etc.) and label each as Employment/Trade/Rental/Investment/Capital. For each, paste one supporting link (Revenue or Citizens Information). citeturn16search1turn12search3turn12search5  
@@ -355,13 +355,13 @@ Filing/payment habit: Revenue describes payment timing based on valuation date f
 
 ### Weekly assessment pattern
 
-This replicates the “small quiz + major assignment” spirit of the UCD diploma assessment model (without copying it), while adapting it to self‑study:
+This replicates the “small quiz + major assignment” spirit of the diploma assessment model (without copying it), while adapting it to self‑study:
 
 - Weekly quiz (10–15 minutes): 6–10 questions, self‑marked with answer key.
 - Weekly practical task (60–120 minutes): one spreadsheet computation or compliance workflow exercise.
 - Weekly reflection (10 minutes): “What source did I trust most and why?” + “What assumption did I make?”
 
-UCD publicly states quizzes are used throughout the course and a final written assignment is the major component. citeturn5view1
+Publicly states quizzes are used throughout the course and a final written assignment is the major component. citeturn5view1
 
 ### Rubric for weekly practical tasks (self‑mark / peer‑mark)
 
@@ -454,9 +454,6 @@ Because the course is computation‑heavy, accessibility is best achieved throug
 ### Direct links (copy/paste)
 
 ```text
-UCD Professional Academy – Irish Taxation course page:
-https://www.ucd.ie/professionalacademy/findyourcourse/irish-taxation/
-
 Revenue – Tax rates, bands and reliefs (2026):
 https://www.revenue.ie/en/personal-tax-credits-reliefs-and-exemptions/tax-relief-charts/index.aspx
 
