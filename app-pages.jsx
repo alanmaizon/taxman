@@ -580,6 +580,34 @@ const QUIZZES = {
 
 // ---- Data: worked computations ----
 const COMPUTATIONS = {
+  '01': {
+    title: "Residency day-count · 2025 tax year",
+    subtitle: "Apply the 183-day current-year test and the 280-day two-year look-back. Presence = physically in Ireland at midnight.",
+    tag: "Income",
+    rows: [
+      { label: "Days present in Ireland — 2025 (current year)", working: "Travel log", amount: "162 days" },
+      { label: "Days present in Ireland — 2024 (prior year)", working: "Travel log", amount: "129 days" },
+      { label: "Current-year test: ≥ 183 days in 2025?", working: "162 < 183", amount: "Not met" },
+      { label: "Two-year total", working: "162 + 129", amount: "291 days", isSub: true },
+      { label: "Two-year test: ≥ 280 days, ≥ 1 day in each year?", working: "291 ≥ 280 ✓", amount: "Met" },
+      { label: "Residence status for 2025", working: "Two-year test satisfied", amount: "Resident", isTotal: true },
+    ],
+    note: "Revenue counts each day you are in Ireland at midnight. Record all departure and arrival dates — border crossings are not tracked electronically. Source: Revenue — 'How to know if you are resident for tax purposes'.",
+  },
+  '02': {
+    title: "Income classification — five sources",
+    subtitle: "Map each receipt to its Schedule / Case. The category determines which expenses are deductible, which rate applies, and which form you file.",
+    tag: "Income",
+    rows: [
+      { label: "Employment salary", working: "Schedule E", amount: "€45,000" },
+      { label: "Self-employed consulting profit", working: "Sch. D, Case I", amount: "€12,000" },
+      { label: "Rental profit (net of expenses)", working: "Sch. D, Case V", amount: "€8,400" },
+      { label: "Bank deposit interest (gross, before DIRT)", working: "Sch. D, Case IV", amount: "€1,500" },
+      { label: "Irish dividend received (gross)", working: "Schedule F", amount: "€800" },
+      { label: "Total income from all sources", working: "", amount: "€67,700", isTotal: true },
+    ],
+    note: "Case I profits are reduced by trading expenses. Case V rental by allowable property costs. DIRT is deducted at source by the bank but must still be declared on Form 11 above the non-PAYE threshold. Source: TCA 1997 — charging structure.",
+  },
   '03': {
     title: "Tax-adjusted profit · sole trader",
     subtitle: "A simple P&L adjusted to arrive at taxable profit. Replicate each row in a spreadsheet and note the Revenue source for each adjustment.",
