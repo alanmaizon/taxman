@@ -1,0 +1,196 @@
+/* Irish Taxation Course — design tokens & base styles */
+
+:root {
+  --paper: oklch(0.985 0.005 90);
+  --paper-2: oklch(0.965 0.008 85);
+  --paper-3: oklch(0.94 0.01 85);
+  --rule: oklch(0.86 0.012 85);
+  --rule-soft: oklch(0.92 0.01 85);
+  --ink: oklch(0.20 0.012 250);
+  --ink-2: oklch(0.36 0.012 250);
+  --ink-3: oklch(0.55 0.012 250);
+  --moss: oklch(0.45 0.06 145);
+  --moss-deep: oklch(0.32 0.05 145);
+  --moss-soft: oklch(0.92 0.03 145);
+  --clay: oklch(0.62 0.10 50);
+  --clay-soft: oklch(0.94 0.04 60);
+
+  --serif: 'Newsreader', 'Source Serif Pro', Georgia, serif;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+.itx {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.itx h1, .itx h2, .itx h3, .itx .serif {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.itx .mono { font-family: var(--mono); }
+.itx .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+.itx .eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+
+.itx .rule { border-color: var(--rule); }
+.itx .rule-soft { border-color: var(--rule-soft); }
+
+.itx button, .itx .btn {
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.itx .btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+}
+.itx .btn-primary:hover { background: var(--moss-deep); border-color: var(--moss-deep); }
+
+.itx .btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+.itx .btn-ghost:hover { border-color: var(--ink); }
+
+.itx .btn-moss {
+  background: var(--moss);
+  color: var(--paper);
+  border: 1px solid var(--moss);
+}
+.itx .btn-moss:hover { background: var(--moss-deep); }
+
+/* Subtle paper texture via radial noise */
+.itx .paper-bg {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 20% 10%, oklch(0.96 0.01 85) 0, transparent 40%),
+    radial-gradient(circle at 80% 70%, oklch(0.96 0.012 70) 0, transparent 50%);
+}
+
+/* Hairline tables */
+.itx table.ledger {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.itx table.ledger th,
+.itx table.ledger td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--rule-soft);
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+.itx table.ledger th {
+  font-weight: 500;
+  color: var(--ink-3);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--rule);
+}
+.itx table.ledger td.num { text-align: right; }
+.itx table.ledger tr.total td {
+  border-top: 1px solid var(--ink);
+  border-bottom: 2px double var(--ink);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Module chip */
+.itx .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--ink-2);
+  background: var(--paper);
+}
+
+/* Section labels */
+.itx .section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss-deep);
+}
+
+.itx .divider-thick {
+  border-top: 1px solid var(--ink);
+}
+
+/* Striped placeholder */
+.itx .stripe-placeholder {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--paper-3),
+    var(--paper-3) 8px,
+    var(--paper-2) 8px,
+    var(--paper-2) 16px
+  );
+  border: 1px solid var(--rule);
+}
+
+.itx .pill-tax {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.itx .pill-income { background: oklch(0.93 0.04 145); color: var(--moss-deep); }
+.itx .pill-vat    { background: oklch(0.94 0.04 60);  color: oklch(0.40 0.08 50); }
+.itx .pill-cgt    { background: oklch(0.93 0.03 250); color: oklch(0.36 0.05 250); }
+.itx .pill-ct     { background: oklch(0.94 0.025 30); color: oklch(0.40 0.05 30); }
+.itx .pill-cat    { background: oklch(0.94 0.03 320); color: oklch(0.40 0.05 320); }
+
+/* Dotted leader */
+.itx .leader {
+  background-image: radial-gradient(circle, var(--ink-3) 1px, transparent 1px);
+  background-size: 6px 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 1px;
+}
+
+/* iOS-style scroll containers */
+.itx .scroll-x {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.itx .scroll-x::-webkit-scrollbar { display: none; }
+
+/* Course number style */
+.itx .week-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-3);
+}
